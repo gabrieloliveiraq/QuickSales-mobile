@@ -22,4 +22,9 @@ export const Separator = styled.View`
   margin: 24px 0;
 `;
 
+export const AddToCartButton = styled.TouchableOpacity`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+`;
 // paramos em 2:34

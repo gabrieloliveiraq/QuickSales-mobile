@@ -1,8 +1,15 @@
-import { FlatList } from "react-native";
+import { FlatList, TouchableOpacity } from "react-native";
 import { Text } from "../Text";
 import { products } from "../../mocks/products";
-import { Product, ProductImage, ProductDetails, Separator } from "./styles";
+import {
+  Product,
+  ProductImage,
+  ProductDetails,
+  Separator,
+  AddToCartButton,
+} from "./styles";
 import { formatCurrency } from "../../utils/formatCurrency";
+import { PlusCircle } from "../Icons/PlusCircle";
 
 export function Menu() {
   return (
@@ -28,6 +35,10 @@ export function Menu() {
               {formatCurrency(product.price)}
             </Text>
           </ProductDetails>
+
+          <AddToCartButton>
+            <PlusCircle />
+          </AddToCartButton>
         </Product>
       )}
     />
